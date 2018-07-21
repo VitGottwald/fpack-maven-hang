@@ -1,6 +1,10 @@
-First create a docker image based on maven image
+First clone this repo and cd into it.
+
+Then create a docker image based on official maven docker image. 
+The `Dockerfile` in the root of the repo contains instructions 
+for docker how to build it.
 ```
-docker build -t fpack-reproduce-hang
+docker build -t fpack-reproduce-hang .
 ```
 Then create a couple of volumes to persist maven and yarn cache,
 node_modules, and node/yarn binaries installed by maven (nodejs volume).
