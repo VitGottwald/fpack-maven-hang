@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Building FE builder with fastpack"
+fpack --development \
+     --no-cache \
+     -n index.bundle.js \
+     -o dist \
+     --preprocess='\.html$:html-loader' \
+     --preprocess='.+\.js$' \
+     index.js
